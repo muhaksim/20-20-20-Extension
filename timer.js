@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const timerElement = document.getElementById('timer');
   const messageElement = document.getElementById('message');
-  messageElement.textContent = "Look at an object that is 20 feets away";
+  messageElement.textContent = "Look at an object 20 feet away";
   let countdown = 20;
   const countdownInterval = setInterval(() => {
      countdown--;

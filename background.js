@@ -1,7 +1,7 @@
 // Listen for the extension installation
 chrome.runtime.onInstalled.addListener(() => {
   // Set an alarm to trigger after 2 minutes (120000 milliseconds)
-  chrome.alarms.create('openTabAlarm', { when: Date.now() + 1200000 });
+  chrome.alarms.create('openTabAlarm', { when: Date.now() + 1200000  });
 });
 
 // Listen for alarms
@@ -22,7 +22,7 @@ function openTabWithTimer() {
       // Open the new tab
       chrome.tabs.create({url: chrome.runtime.getURL("timer.html")}, (tab) => {
           // Send a message to the new tab to start the countdown
-          chrome.tabs.sendMessage(tab.id, {action: "startCountdown"});
+          // chrome.tabs.sendMessage(tab.id, {action: "startCountdown"});
 
           // Listen for the tab to be closed
           chrome.tabs.onRemoved.addListener(function listener(tabId, removeInfo) {
